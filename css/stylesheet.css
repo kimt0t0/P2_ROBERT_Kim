@@ -118,7 +118,6 @@ ul {
     display: flex;
     font-weight: bold;
     font-size: 16px;
-    wrap: flex-wrap;
 }
 
 .transparent-button{
@@ -136,7 +135,6 @@ ul {
     border: 3px #d4d4d4 solid;
     border-left: hidden;
     flex: none;
-    wrap: start
 }
 
 .filter-button:hover {
@@ -201,20 +199,32 @@ ul {
 /* *** >PORTRAIT *** */
 @media screen and (max-width: 768px) and (orientation:portrait)
 {
-    #logo-menu {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+
+    /* ** MARGES & EN-TETE ** */
+    main, section, nav {
+        margin: 0px;
     }
+
+    #logo-menu {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 5px;
+        padding: 0px;
+        flex-direction: column;
+    }
+
+    #logo {
+        margin-left: 50%;
+    }
+    
 
     nav ul {
+        width: 100%;
+        justify-content: space-evenly;
+        margin-left: 0px;
+        margin-top: 30px;
         padding-bottom: 15px;
         border-bottom: 3px #f2f2f2 solid;
-        border-width: 50%;
-    }
-
-    nav ul li a {
-        width: 50%;
     }
 
     nav ul li a:hover {
@@ -223,6 +233,33 @@ ul {
         border-bottom: 2px #0065fc solid;
         padding-bottom: 12px;
     } /* Problème restant: longueur de la bordure colorée */
+    
+    /* ** BARRE RECHERCHE ** */
+    h1, p, #search-bar {
+        margin-left: 10px;
+        white-space: normal;
+        line-height: 1;
+    }
+
+    /* ** FILTRES ** */
+    #filters {
+        margin: auto;
+        flex-direction: row;
+        align-content: flex-start;
+        flex-wrap: wrap;
+    }
+    #transparent-button {
+        /* placer seul sur une ligne */
+    }
+
+    #filter-buttons {
+        flex-direction: row;
+        align-content: flex-start;
+    }
+
+    
+
+    
 }
 
 /* *** >PAYSAGE *** */
