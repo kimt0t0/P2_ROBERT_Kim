@@ -9,7 +9,8 @@
 main, section, nav {
     font-family: Raleway, Verdana, Arial, serif;
     line-height: 0.7;
-    margin: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 h1 {
@@ -30,13 +31,13 @@ p, nav, button {
     display: flex;
     justify-content: space-between;
     padding-left: 15px; /* sinon décalage par rapport haut de page */
-    margin-top: 20px;
     margin-left: 40px;
     margin-right: 60px;
     margin-bottom: 25px;
 }
 
 #logo {
+    margin-top: 20px;
     width: 100px;
     height: 47px;
     margin-top: 10px;
@@ -44,14 +45,18 @@ p, nav, button {
 }
 
 nav ul li {
-    padding-right: 30px;
-    padding-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    width: 180px;
+    height: 50px;
+    margin-top: 0px;
+    padding-top: 40px;
 }
 
-nav ul li a:hover {
+nav ul li:hover {
     color: #0065fc;
     border-top: 2px #0065fc solid;
-    padding-top: 50px;
 }
 
 a {
@@ -102,19 +107,19 @@ ul {
 }
 
 #search-button {
-    width: 136px;
-    height: 53px;
-    padding-left: 18px;
-    padding-right: 18px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    padding: 16px;
+    padding-right: 20px;
+    border-radius: 0 15px 15px 0;
     background-color: #0065fc;
-    border: #0065fc;
-    color: white;
+    border: none;
     text-align: center;
+    color: white;
     font-weight: bold; /* ne correspond pas tout à fait */
     position: sticky;
+    cursor: pointer;
 }
+
+
 
 /* ***** FILTRES ***** */
 #filters {
@@ -186,7 +191,7 @@ ul {
         padding-bottom: 20px;
     }
 
-    nav ul li a:hover {
+    nav ul li:hover {
         border-top: hidden;
         border-left: 2px #0065fc solid;
         padding-top: 15px;
@@ -218,27 +223,25 @@ ul {
         margin-top: 5px;
         padding: 0px;
         flex-direction: column;
+        justify-content: center;
     }
 
     #logo {
-        margin-left: 50%;
+        margin-left: 40%;
     }
     
 
-    nav ul {
-        width: 100%;
+    nav ul li {
         justify-content: space-evenly;
         margin-left: 0px;
         margin-top: 30px;
-        padding-bottom: 15px;
         border-bottom: 3px #f2f2f2 solid;
     }
 
-    nav ul li a:hover {
+    nav ul li:hover {
         border-top: none;
         color: #0065fc;
         border-bottom: 2px #0065fc solid;
-        padding-bottom: 12px;
     } /* Problème restant: longueur de la bordure colorée */
     
     /* ** BARRE RECHERCHE ** */
