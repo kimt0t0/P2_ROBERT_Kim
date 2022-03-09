@@ -120,9 +120,13 @@ ul {
     font-size: 16px;
 }
 
-.transparent-button{
+#transparent-button{
     margin-top: 20px;
     padding: 15px;
+}
+
+#filter-buttons {
+    display: flex;
 }
 
 .filter-button {
@@ -243,22 +247,22 @@ ul {
 
     /* ** FILTRES ** */
     #filters {
-        margin: auto;
         flex-direction: row;
         align-content: flex-start;
         flex-wrap: wrap;
-    }
-    #transparent-button {
-        /* placer seul sur une ligne */
     }
 
     #filter-buttons {
         flex-direction: row;
         align-content: flex-start;
+        flex-wrap: wrap;
     }
 
-    
-
+    .filter-button {
+        margin-left: 0px;
+        padding-left: 0px;
+        margin-right: 10px;
+    }
     
 }
 
