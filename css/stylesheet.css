@@ -1,0 +1,192 @@
+/* ¤*******¤*******¤ GENERAL ¤*******¤*******¤ */
+
+/* ********** REGLAGES POLICES TITRES & PARAGRAPHES ********** */
+@font-face {
+    font-family: "Raleway";
+    src: url("Raleway-VariableFont_wght.ttf");
+}
+
+main, section {
+    font-family: Raleway, Verdana, Arial, serif;
+    line-height: 0.7;
+    margin: 40px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+p, nav, button {
+    font-size: 16px;
+}
+
+/* ********** HEADER ********** */
+
+/* ***** LOGO ET ANCRES PAGE ***** */
+#logo-menu, nav ul {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15px; /* sinon décalage par rapport haut de page */
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 60px;
+    margin-bottom: 50px;
+}
+
+#logo {
+    width: 100px;
+    height: 50px;
+    padding-top: 20px;
+}
+
+nav ul li {
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+nav ul li a:hover {
+    text-decoration: overline #0065fc;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* ********** MAIN ********** */
+
+/* ********** INTRO ********** */
+
+/* ***** BARRE DE RECHERCHE ***** */
+
+#search-bar, input[value] {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 2px #f2f2f2;
+    font-size: 16px;
+    flex: none;
+}
+
+/* Partie grisée, utilisation des noms de classe et pas d'un id car sinon l'icone est bleue du fait des règles de priorité*/
+.fa-solid.fa-location-dot {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-top: 2px #f2f2f2 solid;
+    border-bottom: 2px #f2f2f2 solid;
+    background-color: #f2f2f2;
+    color: black;
+}
+
+#search {
+    padding-left: 20px;
+    border-top: 2px #f2f2f2 solid;
+    border-bottom: 2px #f2f2f2 solid;
+    border-left: hidden;
+    border-right: hidden;
+    font-weight: bold;
+}
+
+#search-button {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 15px;
+    background-color: #0065fc;
+    border: #0065fc;
+    color: white;
+    font-weight: bold; /* ne correspond pas tout à fait */
+    position: fixed;
+}
+
+/* ***** FILTRES ***** */
+#filters {
+    display: flex;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.transparent-button{
+    margin-top: 20px;
+    padding: 15px;
+}
+
+.filter-button {
+    margin-top: 15px;
+    margin-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 30px;
+    border-radius: 100px;
+    border: 3px #d4d4d4 solid;
+    border-left: hidden;
+    flex: none;
+}
+
+.filter-button:hover {
+    background-color: #0065fc;
+}
+
+.blue-icon {
+    margin-right: 15px;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: #deebff;
+    font-size: 18px;
+}
+
+.fa-solid.fa-child {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.fa-solid {
+    color: #0065fc;
+}
+
+
+/* ¤*******¤*******¤ MEDIA QUERIES ¤*******¤*******¤ */
+
+/* ***** TABLETTE ***** */
+
+/* *** >PAYSAGE *** */
+@media screen and (max-width: 992px) and (orientation:landscape)
+{
+    main, div {
+        width: auto;
+        flex-wrap: nowrap;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+/* *** >PORTRAIT *** */
+
+@media screen and (max-width: 992px) and (orientation:portrait)
+{
+    /* à compléter */
+}
+
+
+/* ***** SMARTPHONE ***** */
+
+/* *** >PORTRAIT *** */
+@media screen and (max-width: 768px) and (orientation:portrait)
+{
+    /* à compléter */
+}
+
+/* *** >PAYSAGE *** */
+@media screen and (max-width: 768px) and (orientation:landscape)
+{
+    /* à compléter */
+}
