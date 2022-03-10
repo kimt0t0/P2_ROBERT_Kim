@@ -31,16 +31,13 @@ p, nav, button {
     display: flex;
     justify-content: space-between;
     padding-left: 15px; /* sinon décalage par rapport haut de page */
-    margin-left: 40px;
-    margin-right: 60px;
-    margin-bottom: 25px;
+    margin: 0 60px 25px 40px;
 }
 
 #logo {
     margin-top: 20px;
     width: 100px;
     height: 47px;
-    margin-top: 10px;
     padding-top: 20px;
 }
 
@@ -174,33 +171,75 @@ ul {
     color: #0065fc;
 }
 
+/* ***** RESULTAT RECHERCHE ***** */
+#search-result {
+    margin-top: 40px;
+}
+.i-info {
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px #d2d2d2 solid;
+    padding: 2px 9px 1px 9px;
+    font-family: Courrier New, Constantia, Cambria, serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0065fc;
+}
+
+
 
 /* ¤*******¤*******¤ MEDIA QUERIES ¤*******¤*******¤ */
 
 /* ***** TABLETTE ***** */
-
-/* *** >PAYSAGE *** */
-@media screen and (max-width: 992px) and (orientation:landscape)
+@media screen and (max-width: 992px)
 {
+    /* ** GENERAL ** */
     main, div {
         width: auto;
         flex-wrap: nowrap;
     }
 
-    nav ul {
-        flex-direction: column;
+    /* ** LOGO & ANCRES ** */
+    #logo-menu, nav ul {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 15px; /* sinon décalage par rapport haut de page */
+        margin: 0 60px 25px 40px;
     }
 
-    nav ul li {
-        padding-bottom: 20px;
+    nav ul {
+        border-bottom: #f2f2f2 solid;
     }
 
     nav ul li:hover {
-        border-top: hidden;
-        border-left: 2px #0065fc solid;
-        padding-top: 15px;
+        border-top: none;
+        color: #0065fc;
+        border-bottom: #0065fc solid;
+    } /* Problème restant: longueur de la bordure colorée */
+
+     /* ** FILTRES ** */
+     #filters {
+        margin: 0;
+        flex-direction: row;
+        align-content: flex-start;
+        flex-wrap: wrap;
     }
+
+    #filter-buttons {
+        flex-direction: row;
+        align-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .filter-button {
+        margin-left: 0px;
+        padding-left: 0px;
+        margin-right: 10px;
+    }
+    
 }
+
+
 
 /* *** >PORTRAIT *** */
 
@@ -208,6 +247,8 @@ ul {
 {
     /* à compléter, l'idée serait de reprendre ce qui est fait pour téléphone et adapter à la taille écran tablette? */
 }
+
+
 
 
 /* ***** SMARTPHONE ***** */ 
@@ -225,13 +266,10 @@ ul {
     #logo-menu {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
     }
     
     nav ul {
-        display: flex;
-        justify-content: stretch;
         border-bottom: #f2f2f2 solid;
     }
 
