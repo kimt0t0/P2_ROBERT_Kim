@@ -106,9 +106,9 @@ ul {
     outline: none;
 }
 
-#search-button {
-    padding: 16px;
-    padding-right: 20px;
+#no-mobile-search-button {
+    display: inline;
+    padding: 15px 20px 15px 20px;
     border-radius: 0 15px 15px 0;
     background-color: #0065fc;
     border: none;
@@ -117,6 +117,10 @@ ul {
     font-weight: bold; /* ne correspond pas tout à fait */
     position: sticky;
     cursor: pointer;
+}
+
+#no-dekstop-search-button {
+    display:none;
 }
 
 
@@ -206,56 +210,64 @@ ul {
 }
 
 
-/* ***** SMARTPHONE ***** */
+/* ***** SMARTPHONE ***** */ 
 
 /* *** >PORTRAIT *** */
 @media screen and (max-width: 768px) and (orientation:portrait)
 {
 
     /* ** MARGES & EN-TETE ** */
-    main, section, nav {
+    * {
         margin: 0px;
+        padding: 0px;
     }
 
     #logo-menu {
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-top: 5px;
-        padding: 0px;
+        display: flex;
         flex-direction: column;
         justify-content: center;
-    }
-
-    #logo {
-        margin-left: 40%;
+        align-items: center;
     }
     
-
-    nav ul li {
-        justify-content: space-evenly;
-        margin-left: 0px;
-        margin-top: 30px;
-        border-bottom: 3px #f2f2f2 solid;
+    nav ul {
+        display: flex;
+        justify-content: stretch;
+        border-bottom: #f2f2f2 solid;
     }
 
     nav ul li:hover {
         border-top: none;
         color: #0065fc;
-        border-bottom: 2px #0065fc solid;
+        border-bottom: #0065fc solid;
     } /* Problème restant: longueur de la bordure colorée */
     
-    /* ** BARRE RECHERCHE ** */
-    h1, p, #search-bar {
-        margin-left: 10px;
+    /* ** TEXTE INTRO + BARRE RECHERCHE ** */
+    h1, p {
         white-space: normal;
-        line-height: 1;
+        line-height: 1.2;
+        margin-bottom: 10px; 
+    } 
+    
+    #search-bar {
+        white-space: normal;
+        margin-top: 15px;
     }
 
-    #search-button {
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
-        width: 50px;
-        color: transparent;
+    #no-mobile-search-button {
+        display: none;
+    }
+
+    #search {
+        margin-right: 0px;
+    }
+
+    #no-dekstop-search-button {
+        display: inline;
+        padding: 15px;
+        border-radius: 0 15px 15px 0;
+        border: 2px #0065fc solid;
+        background-color: #0065fc;
+        cursor: pointer;
     }
 
     .fa-solid.fa-magnifying-glass {
