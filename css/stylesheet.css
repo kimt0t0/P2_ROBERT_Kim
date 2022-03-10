@@ -6,19 +6,22 @@
     src: url("Raleway-VariableFont_wght.ttf");
 }
 
-main, section {
+main, section, nav {
     font-family: Raleway, Verdana, Arial, serif;
     line-height: 0.7;
-    margin: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 h1 {
     font-size: 24px;
     font-weight: bold;
+    white-space: nowrap;
 }
 
 p, nav, button {
     font-size: 16px;
+    white-space: nowrap;
 }
 
 /* ********** HEADER ********** */
@@ -28,25 +31,29 @@ p, nav, button {
     display: flex;
     justify-content: space-between;
     padding-left: 15px; /* sinon décalage par rapport haut de page */
-    margin-top: 30px;
-    margin-left: 40px;
-    margin-right: 60px;
-    margin-bottom: 50px;
+    margin: 0 60px 25px 40px;
 }
 
 #logo {
+    margin-top: 20px;
     width: 100px;
-    height: 50px;
+    height: 47px;
     padding-top: 20px;
 }
 
 nav ul li {
-    margin-right: 30px;
-    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    width: 180px;
+    height: 50px;
+    margin-top: 0px;
+    padding-top: 40px;
 }
 
-nav ul li a:hover {
-    text-decoration: overline #0065fc;
+nav ul li:hover {
+    color: #0065fc;
+    border-top: 2px #0065fc solid;
 }
 
 a {
@@ -61,7 +68,6 @@ ul {
 /* ********** MAIN ********** */
 
 /* ********** INTRO ********** */
-
 /* ***** BARRE DE RECHERCHE ***** */
 
 #search-bar, input[value] {
@@ -76,35 +82,45 @@ ul {
 .fa-solid.fa-location-dot {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    padding-top: 15px;
-    padding-bottom: 15px;
     padding-left: 20px;
-    padding-right: 20px;
-    border-top: 2px #f2f2f2 solid;
-    border-bottom: 2px #f2f2f2 solid;
+    border-top: 1px #f2f2f2 solid;
+    border-bottom: 1px #f2f2f2 solid;
     background-color: #f2f2f2;
     color: black;
 }
 
 #search {
-    padding-left: 20px;
-    border-top: 2px #f2f2f2 solid;
-    border-bottom: 2px #f2f2f2 solid;
+    margin-left: 15px;
+    padding-left: 15px;
+    border-top: 1px #f2f2f2 solid;
+    border-bottom: 1px #f2f2f2 solid;
     border-left: hidden;
     border-right: hidden;
     font-weight: bold;
 }
 
-#search-button {
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    padding: 15px;
+#search:focus {
+    outline: none;
+}
+
+#no-mobile-search-button {
+    display: inline;
+    padding: 15px 20px 15px 20px;
+    border-radius: 0 15px 15px 0;
     background-color: #0065fc;
-    border: #0065fc;
+    border: none;
+    text-align: center;
     color: white;
     font-weight: bold; /* ne correspond pas tout à fait */
-    position: fixed;
+    position: sticky;
+    cursor: pointer;
 }
+
+#no-dekstop-search-button {
+    display:none;
+}
+
+
 
 /* ***** FILTRES ***** */
 #filters {
@@ -113,9 +129,13 @@ ul {
     font-size: 16px;
 }
 
-.transparent-button{
+#transparent-button{
     margin-top: 20px;
     padding: 15px;
+}
+
+#filter-buttons {
+    display: flex;
 }
 
 .filter-button {
@@ -125,18 +145,18 @@ ul {
     padding-bottom: 15px;
     padding-right: 30px;
     border-radius: 100px;
-    border: 3px #d4d4d4 solid;
+    border: 3px #d6d6d6 solid;
     border-left: hidden;
     flex: none;
 }
 
 .filter-button:hover {
-    background-color: #0065fc;
+    background-color: #f2e4fd;
 }
 
 .blue-icon {
-    margin-right: 15px;
-    padding: 15px;
+    margin-right: 16px;
+    padding: 16px;
     border-radius: 50%;
     background-color: #deebff;
     font-size: 18px;
@@ -151,38 +171,168 @@ ul {
     color: #0065fc;
 }
 
+/* ***** RESULTAT RECHERCHE ***** */
+#search-result {
+    margin-top: 40px;
+}
+.i-info {
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px #d2d2d2 solid;
+    padding: 2px 9px 1px 9px;
+    font-family: Courrier New, Constantia, Cambria, serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0065fc;
+}
+
+
 
 /* ¤*******¤*******¤ MEDIA QUERIES ¤*******¤*******¤ */
 
 /* ***** TABLETTE ***** */
-
-/* *** >PAYSAGE *** */
-@media screen and (max-width: 992px) and (orientation:landscape)
+@media screen and (max-width: 992px)
 {
+    /* ** GENERAL ** */
     main, div {
         width: auto;
         flex-wrap: nowrap;
     }
 
-    nav ul {
-        flex-direction: column;
+    /* ** LOGO & ANCRES ** */
+    #logo-menu, nav ul {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 15px; /* sinon décalage par rapport haut de page */
+        margin: 0 60px 25px 40px;
     }
+
+    nav ul {
+        border-bottom: #f2f2f2 solid;
+    }
+
+    nav ul li:hover {
+        border-top: none;
+        color: #0065fc;
+        border-bottom: #0065fc solid;
+    } /* Problème restant: longueur de la bordure colorée */
+
+     /* ** FILTRES ** */
+     #filters {
+        margin: 0;
+        flex-direction: row;
+        align-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    #filter-buttons {
+        flex-direction: row;
+        align-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .filter-button {
+        margin-left: 0px;
+        padding-left: 0px;
+        margin-right: 10px;
+    }
+    
 }
+
+
 
 /* *** >PORTRAIT *** */
 
 @media screen and (max-width: 992px) and (orientation:portrait)
 {
-    /* à compléter */
+    /* à compléter, l'idée serait de reprendre ce qui est fait pour téléphone et adapter à la taille écran tablette? */
 }
 
 
-/* ***** SMARTPHONE ***** */
+
+
+/* ***** SMARTPHONE ***** */ 
 
 /* *** >PORTRAIT *** */
 @media screen and (max-width: 768px) and (orientation:portrait)
 {
-    /* à compléter */
+
+    /* ** MARGES & EN-TETE ** */
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #logo-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul {
+        border-bottom: #f2f2f2 solid;
+    }
+
+    nav ul li:hover {
+        border-top: none;
+        color: #0065fc;
+        border-bottom: #0065fc solid;
+    } /* Problème restant: longueur de la bordure colorée */
+    
+    /* ** TEXTE INTRO + BARRE RECHERCHE ** */
+    h1, p {
+        white-space: normal;
+        line-height: 1.2;
+        margin-bottom: 10px; 
+    } 
+    
+    #search-bar {
+        white-space: normal;
+        margin-top: 15px;
+    }
+
+    #no-mobile-search-button {
+        display: none;
+    }
+
+    #search {
+        margin-right: 0px;
+    }
+
+    #no-dekstop-search-button {
+        display: inline;
+        padding: 15px;
+        border-radius: 15px 15px 15px 15px;
+        border: 2px #0065fc solid;
+        background-color: #0065fc;
+        cursor: pointer;
+    }
+
+    .fa-solid.fa-magnifying-glass {
+        align-items: center;
+        color: white;
+    }
+
+    /* ** FILTRES ** */
+    #filters {
+        margin: 0;
+        flex-direction: row;
+        align-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    #filter-buttons {
+        flex-direction: row;
+        align-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .filter-button {
+        margin-left: 0px;
+        padding-left: 0px;
+        margin-right: 10px;
+    }
+    
 }
 
 /* *** >PAYSAGE *** */
