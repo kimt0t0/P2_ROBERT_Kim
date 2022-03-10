@@ -6,11 +6,13 @@
     src: url("Raleway-VariableFont_wght.ttf");
 }
 
-main, section, nav {
+header, main {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-right: 40px;
     font-family: Raleway, Verdana, Arial, serif;
     line-height: 0.7;
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
 h1 {
@@ -30,12 +32,11 @@ p, nav, button {
 #logo-menu, nav ul {
     display: flex;
     justify-content: space-between;
-    padding-left: 15px; /* sinon décalage par rapport haut de page */
-    margin: 0 60px 25px 40px;
 }
 
 #logo {
-    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
     width: 100px;
     height: 47px;
     padding-top: 20px;
@@ -49,6 +50,7 @@ nav ul li {
     height: 50px;
     margin-top: 0px;
     padding-top: 40px;
+    border-top: 2px transparent solid;
 }
 
 nav ul li:hover {
@@ -71,6 +73,7 @@ ul {
 /* ***** BARRE DE RECHERCHE ***** */
 
 #search-bar, input[value] {
+    display: inline-block;
     padding-top: 15px;
     padding-bottom: 15px;
     border: 2px #f2f2f2;
@@ -80,27 +83,23 @@ ul {
 
 /* Partie grisée, utilisation des noms de classe et pas d'un id car sinon l'icone est bleue du fait des règles de priorité*/
 .fa-solid.fa-location-dot {
+    display: inline;
+    align-items: center;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    padding-left: 20px;
-    border-top: 1px #f2f2f2 solid;
-    border-bottom: 1px #f2f2f2 solid;
+    padding: 15px;
+    border-top: 2px #f2f2f2 solid;
+    border-bottom: 2px #f2f2f2 solid;
     background-color: #f2f2f2;
     color: black;
 }
 
 #search {
-    margin-left: 15px;
-    padding-left: 15px;
     border-top: 1px #f2f2f2 solid;
     border-bottom: 1px #f2f2f2 solid;
     border-left: hidden;
     border-right: hidden;
     font-weight: bold;
-}
-
-#search:focus {
-    outline: none;
 }
 
 #no-mobile-search-button {
@@ -123,58 +122,49 @@ ul {
 
 
 /* ***** FILTRES ***** */
-#filters {
+
+#filter-buttons {
+    width: 60%;
     display: flex;
+    justify-content: space-between;
+    align-content: space-between;
     font-weight: bold;
     font-size: 16px;
 }
 
-#transparent-button{
-    margin-top: 20px;
-    padding: 15px;
-}
-
-#filter-buttons {
-    display: flex;
-}
-
 .filter-button {
-    margin-top: 15px;
-    margin-left: 30px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-right: 30px;
-    border-radius: 100px;
-    border: 3px #d6d6d6 solid;
-    border-left: hidden;
-    flex: none;
+    display: inline-block;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    padding-right: 15px;
+    border-radius: 25px;
+    border: 2px #d2d2d2 solid;
+}
+
+a div i.fa-solid {
+    margin-right: 15px;
+    padding: 15px;
+    border-radius: 50%;
+    border: none;
+    background-color: #deebff;
+    color: #0065fc;
+}
+
+#transparent-button {
+    padding: 15px;
+    border: none;
 }
 
 .filter-button:hover {
-    background-color: #f2e4fd;
-}
-
-.blue-icon {
-    margin-right: 16px;
-    padding: 16px;
-    border-radius: 50%;
-    background-color: #deebff;
-    font-size: 18px;
-}
-
-.fa-solid.fa-child {
-    padding-left: 3px;
-    padding-right: 3px;
-}
-
-.fa-solid {
-    color: #0065fc;
+    background-color:#0065fc;
+    color:#01255c;
 }
 
 /* ***** RESULTAT RECHERCHE ***** */
 #search-result {
     margin-top: 40px;
 }
+
 .i-info {
     margin-right: 10px;
     border-radius: 50%;
@@ -203,8 +193,6 @@ ul {
     #logo-menu, nav ul {
         display: flex;
         justify-content: space-between;
-        padding-left: 15px; /* sinon décalage par rapport haut de page */
-        margin: 0 60px 25px 40px;
     }
 
     nav ul {
@@ -258,9 +246,13 @@ ul {
 {
 
     /* ** MARGES & EN-TETE ** */
-    * {
-        margin: 0px;
-        padding: 0px;
+
+    body, header {
+        margin: 0;
+    }
+
+    main {
+        margin: 5px;
     }
 
     #logo-menu {
@@ -315,22 +307,17 @@ ul {
 
     /* ** FILTRES ** */
     #filters {
-        margin: 0;
-        flex-direction: row;
-        align-content: flex-start;
+        display: flex;
+        justify-content: space-between;
+        align-content: space-between;
         flex-wrap: wrap;
     }
 
     #filter-buttons {
+        width: 100%;
         flex-direction: row;
         align-content: flex-start;
         flex-wrap: wrap;
-    }
-
-    .filter-button {
-        margin-left: 0px;
-        padding-left: 0px;
-        margin-right: 10px;
     }
     
 }
