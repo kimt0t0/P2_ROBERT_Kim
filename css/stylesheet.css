@@ -264,7 +264,7 @@ ul {
     #no-dekstop-search-button {
         display: inline;
         padding: 15px;
-        border-radius: 0 15px 15px 0;
+        border-radius: 15px 15px 15px 15px;
         border: 2px #0065fc solid;
         background-color: #0065fc;
         cursor: pointer;
@@ -277,6 +277,7 @@ ul {
 
     /* ** FILTRES ** */
     #filters {
+        margin: 0;
         flex-direction: row;
         align-content: flex-start;
         flex-wrap: wrap;
