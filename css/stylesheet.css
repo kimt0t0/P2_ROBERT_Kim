@@ -9,8 +9,7 @@
 header, main {
     display: flex;
     flex-direction: column;
-    margin-left: 40px;
-    margin-right: 40px;
+    justify-content: space-around;
     font-family: Raleway, Verdana, Arial, serif;
     line-height: 0.7;
 }
@@ -123,7 +122,7 @@ ul {
 
 /* ***** FILTRES ***** */
 
-#filter-buttons {
+#display-filter-buttons {
     width: 60%;
     display: flex;
     justify-content: space-between;
@@ -134,11 +133,11 @@ ul {
 
 .filter-button {
     display: inline-block;
-    flex-wrap: nowrap;
     white-space: nowrap;
     padding-right: 15px;
     border-radius: 25px;
     border: 2px #d2d2d2 solid;
+    font-weight: bold
 }
 
 a div i.fa-solid {
@@ -148,11 +147,6 @@ a div i.fa-solid {
     border: none;
     background-color: #deebff;
     color: #0065fc;
-}
-
-#transparent-button {
-    padding: 15px;
-    border: none;
 }
 
 .filter-button:hover {
@@ -184,18 +178,28 @@ a div i.fa-solid {
 @media screen and (max-width: 992px)
 {
     /* ** GENERAL ** */
-    main, div {
-        width: auto;
-        flex-wrap: nowrap;
+
+    header, main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: space-between;
     }
 
     /* ** LOGO & ANCRES ** */
-    #logo-menu, nav ul {
+    #logo-menu {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
+        align-items: center;
     }
 
     nav ul {
+        display: inline-block;
+        justify-content: space-evenly;
+    }
+
+    nav ul li{
+        border-top: none;
         border-bottom: #f2f2f2 solid;
     }
 
@@ -203,26 +207,40 @@ a div i.fa-solid {
         border-top: none;
         color: #0065fc;
         border-bottom: #0065fc solid;
-    } /* Problème restant: longueur de la bordure colorée */
+    }
+
+    /* ** BARRE RECHERCHE ** */
+    #no-mobile-search-button {
+        display: none;
+    }
+
+    #no-dekstop-search-button {
+        display: inline;
+        padding: 15px;
+        border-radius: 15px 15px 15px 15px;
+        border: 2px #0065fc solid;
+        background-color: #0065fc;
+        cursor: pointer;
+    }
+
+    .fa-solid.fa-magnifying-glass {
+        align-items: center;
+        color: white;
+    }
+
 
      /* ** FILTRES ** */
-     #filters {
-        margin: 0;
-        flex-direction: row;
-        align-content: flex-start;
-        flex-wrap: wrap;
-    }
+
+     #display-filter-buttons {
+         width: 100%;
+         display: flex;
+         flex-wrap: wrap;
+     }
 
     #filter-buttons {
         flex-direction: row;
         align-content: flex-start;
         flex-wrap: wrap;
-    }
-
-    .filter-button {
-        margin-left: 0px;
-        padding-left: 0px;
-        margin-right: 10px;
     }
     
 }
@@ -273,16 +291,10 @@ a div i.fa-solid {
     
     /* ** TEXTE INTRO + BARRE RECHERCHE ** */
     h1, p {
-        white-space: normal;
+        white-space: pre-line;
         line-height: 1.2;
-        margin-bottom: 10px; 
     } 
     
-    #search-bar {
-        white-space: normal;
-        margin-top: 15px;
-    }
-
     #no-mobile-search-button {
         display: none;
     }
