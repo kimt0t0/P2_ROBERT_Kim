@@ -198,6 +198,7 @@ h3 {
     flex-wrap: wrap;
 }
 
+
 /* ***** HEBERGEMENTS ***** */
 #hebergements {
     display: flex;
@@ -206,8 +207,6 @@ h3 {
 }
 
 /* *** H-VILLE *** */
-
-/* Penser à régler la height aussi */
 #hebergements-ville {
     box-sizing: border-box;
     width: 60%;
@@ -280,9 +279,26 @@ h3 {
 
 /* ***** ACTIVITES ***** */
 #activites {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    height: 600px;
+}
+
+.cards-display-activites {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 600px;
+    width: 100%;
+}
+
+.activites-columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-height: 600px;
+    width: 50%;
 }
 
 .activity-image {
@@ -302,7 +318,7 @@ h3 {
 .activity-card-big {
     box-sizing: border-box;
     width: 280px;
-    height: 450px;
+    height: 500px;
     border: 1px #f2f2f2 solid;
     border-radius: 25px;
     box-shadow: 3px 3px 10px #d2d2d2;
