@@ -11,12 +11,6 @@ body {
     line-height: 0.7;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-}
-
 h1 {
     font-size: 24px;
     font-weight: bold;
@@ -70,13 +64,6 @@ a {
 }
 
 /* ********** MAIN ********** */
-
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: auto;
-}
 
 /* ********** INTRO ********** */
 /* ***** BARRE DE RECHERCHE ***** */
@@ -185,30 +172,49 @@ a div i.fa-solid {
 
 
 /* ********** ARTICLES ********** */
-h3 {
+h2 {
     font-size: 18px;
     white-space: normal;
+    line-height: 1.5;
+}
+h3 {
+    font-size: 16px;
+    white-space: normal;
     line-height: 1.2;
+}
+
+.card-body p {
+    font-size: 13px;
+}
+
+.card-body {
+    padding-left: 5px;
 }
 
 /* ***** HEBERGEMENTS ***** */
 #hebergements {
     display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
 }
+
+/* *** H-VILLE *** */
 
 /* Penser à régler la height aussi */
 #hebergements-ville {
     box-sizing: border-box;
     width: 60%;
+    height: auto;
+    border-radius: 25px; 
     background-color: #f2f2f2;
-    border-radius: 25px;
-    padding: 15px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
 }
 
 .align-cards {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
 }
@@ -228,12 +234,47 @@ h3 {
 }
 
 .location-card img {
-    height: 120px;
     border-radius: 25px 25px 0px 0px;
+    overflow: hidden;
 }
 
-.location-card h3, .location-card p {
-    line-height: 0.5px;
+
+
+/* *** H-POPULAIRES *** */
+#hebergements-populaires {
+    box-sizing: border-box;
+    width: 30%;
+    background-color: #f2f2f2;
+    border-radius: 25px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.location-card-pop {
+    box-sizing: border-box;
+    width: 350px;
+    height: 150px;
+    border-radius: 25px;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 3px 3px 10px #d2d2d2;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.location-card-pop img {
+    width: 40%;
+    border-radius: 25px 0px 0px 25px;
+}
+
+.location-card-pop.card-body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
 }
 
 
