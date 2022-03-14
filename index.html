@@ -12,15 +12,16 @@
 <body>
 	<!-- ********** HEADER ********** -->
 	<header>
-		<div id="logo-menu">
+		<div id="logo">
 			<a href="index.html" title="Aller vers l'Accueil"><img  src="images\logo\Booki.png" id="logo" alt="Logo du site." /></a>
-			<nav id="menu">
-				<ul>
-					<li><a href = "#hébergements" title="Aller vers la partie Hébergements">Hébergements</a></li>
-					<li><a href = "#activités" title="Aller vers la partie Activités">Activités</a></li>
-				</ul>
-			</nav>
 		</div>
+			
+		<nav id="menu">
+			<ul>
+				<li><a href = "#hébergements" title="Aller vers la partie Hébergements">Hébergements</a></li>
+				<li><a href = "#activités" title="Aller vers la partie Activités">Activités</a></li>
+			</ul>
+		</nav>
 	
 	</header>
 		
@@ -34,21 +35,22 @@
 
 			<!-- BARRE DE RECHERCHE -->
 				<form id="search-bar">
-					<i class="fa-solid fa-location-dot" ><input id="search" maxlength="30" value="Marseille, France"  /></i>
+					<i class="fa-solid fa-location-dot"></i>
+					<input id="search" maxlength="30" value="Marseille, France"  />
 					<button id="no-dekstop-search-button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
 					<button id="no-mobile-search-button" type="submit">Rechercher</button>
 				</form>
 
 		<!-- ***** FILTRES RECHERCHE ***** -->
-			<div id="filters">
-				<div id="transparent-button">Filtres</div>
-				<div id="filter-buttons">
-					<a href="#"><div class="filter-button"><span class="blue-icon"><i class="fa-solid fa-money-bill-wave"></i></span>Économique</div></a>
-					<a href="#"><div class="filter-button"><span class="blue-icon"><i class="fa-solid fa-child"></i></span>Familial</div></a>
-					<a href="#"><div class="filter-button"><span class="blue-icon"><i class="fa-solid fa-heart"></i></span>Romantique</div></a>
-					<a href="#"><div class="filter-button"><span class="blue-icon"><i class="fa-solid fa-dog"></i></span>Animaux autorisés</div></a>
-				</div>
+		<section id="filters">
+		<p>Filtres</p>	
+			<div id="display-filter-buttons">
+				<a href="#"><div class="filter-button"><i class="fa-solid fa-money-bill-wave"></i>Économique</div></a>
+				<a href="#"><div class="filter-button"><i class="fa-solid fa-child"></i>Familial</div></a>
+				<a href="#"><div class="filter-button"><i class="fa-solid fa-heart"></i>Romantique</div></a>
+				<a href="#"><div class="filter-button"><i class="fa-solid fa-dog"></i>Animaux autorisés</div></a>
 			</div>
+		</section>
 
 			<p id="search-result">
 				<span class="i-info">i</span>Plus de 500 logements sont disponibles dans cette ville
@@ -61,20 +63,41 @@
 		<!-- ***** HEBERGEMENTS ***** -->
 		<section id="hébergements">
 
-			<!-- *** HEBERGEMENTS > VILLE *** -->
-			<section id="hébergements-ville">
-				<!-- A compléter-->
-			</section>
-			<!-- *** HEBERGEMENTS > POPULAIRES ***-->
-			<section id="hébergements-populaires">
-				<!-- A compléter-->
-			</section>
+			<!-- *** H > VILLE *** -->
+			<article id="hébergements-ville">
+				<h1>Hébergements à Marseille</h1>
+				<!-- Modèle card-->
+				<a href="#" target="_blank"><div class="location-card">
+					<img src="images/hebergements/1-cannebiere.jpg" alt="Photographie de la Cannebière" />
+					<h3>Auberge La Cannebière</h3>
+					<p>Nuit à partir de <b>25 €</b></p>
+					<i><!-- étoiles à trouver --></i>
+				</div></a>
+				
+				<a href="#"><h2>Afficher plus</h2></a>
+			</article>
+
+			<!-- *** H > POPULAIRES ***-->
+			<aside id="hébergements-populaires">
+				<h1>Les plus populaires</h1>>
+				<i><!-- logo à trouver --></i>
+
+				<!-- Code cards identique-->
+			</aside>
+
 		</section>
 
 
 		<!-- ***** ACTIVITES ***** -->
 		<section id="activités">
-			<!-- A compléter-->
+			<article>
+				<h1>Activités à Marseille</h1>
+
+				<a href="#" target="_blank"><div class="activity-card">
+					<img src="" alt="Activité" />
+					<h3>Vieux Port</h3>
+				</div></a>
+			</article>
 		</section>
 	</main>
 
