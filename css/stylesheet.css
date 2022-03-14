@@ -126,11 +126,11 @@ a {
 
 /* ***** FILTRES ***** */
 
-#display-filter-buttons {
-    width: 60%;
+#filters {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-content: space-between;
+    justify-content: flex-start;
+    align-content: space-around;
     font-weight: bold;
     font-size: 16px;
 }
@@ -138,9 +138,11 @@ a {
 .filter-button {
     display: inline-block;
     white-space: nowrap;
+    margin-left: 15px;
     padding-right: 15px;
     border-radius: 25px;
     border: 2px #d2d2d2 solid;
+    border-left: none;
     font-weight: bold
 }
 
@@ -148,7 +150,7 @@ a div i.fa-solid {
     margin-right: 15px;
     padding: 15px;
     border-radius: 50%;
-    border: none;
+    border: 2px #deebff solid;
     background-color: #deebff;
     color: #0065fc;
 }
@@ -224,47 +226,45 @@ a div i.fa-solid {
 
      /* ** FILTRES ** */
 
+     #filters {
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+     }
+
      #display-filter-buttons {
          width: 100%;
          display: flex;
-         flex-wrap: wrap;
-     }
+         margin: auto;
+     }    
 
-    #filter-buttons {
-        flex-direction: row;
-        align-content: flex-start;
-        flex-wrap: wrap;
+     .filter-button {
+        margin-left: 0;
+        margin-right: 10px;
+        margin-bottom: 10px;
     }
-    
 }
-
-
-/* *** >PORTRAIT *** */
-
-@media screen and (max-width: 992px) and (orientation:portrait)
-{
-    /* à compléter, l'idée serait de reprendre ce qui est fait pour téléphone et adapter à la taille écran tablette? */
-}
-
-
 
 
 /* ***** SMARTPHONE ***** */ 
 
 /* *** >PORTRAIT *** */
-@media screen and (max-width: 768px) and (orientation:portrait)
+@media screen and (max-width: 768px)
 {
 
    /* ** GENERAL ** */
 
    body {
        width: 100%;
-       margin: 0;
+       flex-direction: column;
+       justify-content: flex-start;
+       margin: auto;
    }
 
    main {
     display: flex;
     flex-direction: stretch;
+    margin: 10px;
 }
 
     h1, p {
@@ -290,7 +290,6 @@ a div i.fa-solid {
     }
 
     /* MENU */
-
     #logo {
         padding: auto;
     }
@@ -317,11 +316,6 @@ a div i.fa-solid {
 
 
     /* ** BARRE RECHERCHE ** */
-
-    #display-filter-buttons {
-        width: 100%;
-    }
-
     #no-mobile-search-button {
         display: none;
     }
@@ -341,23 +335,7 @@ a div i.fa-solid {
     }
 
     /* ** FILTRES ** */
-
     #display-filter-buttons {
-        width: 100%;
-        display: flex;
         flex-wrap: wrap;
     }
-
-    #filter-buttons {
-        flex-direction: row;
-        align-content: flex-start;
-        flex-wrap: wrap;
-    }
-    
-    }
-
-/* *** >PAYSAGE *** */
-@media screen and (max-width: 768px) and (orientation:landscape)
-{
-    /* à compléter */
 }
