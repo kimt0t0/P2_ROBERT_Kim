@@ -14,6 +14,7 @@ body {
 h1 {
     font-size: 24px;
     font-weight: bold;
+    line-height: 2;
 }
 
 p, nav, button {
@@ -146,7 +147,7 @@ main {
     font-weight: bold
 }
 
-a div i.fa-solid {
+#display-filter-buttons a div i.fa-solid {
     margin-right: 15px;
     padding: 15px;
     border-radius: 50%;
@@ -182,12 +183,11 @@ a div i.fa-solid {
 h2 {
     font-size: 18px;
     white-space: normal;
-    line-height: 1.5;
+    line-height: 2.5;
 }
 h3 {
     font-size: 16px;
     white-space: normal;
-    line-height: 1.2;
 }
 
 .card-body p {
@@ -212,6 +212,18 @@ h3 {
     justify-content: space-between;
     flex-wrap: nowrap;
     margin-bottom: 50px;
+}
+
+.stars {
+    font-size : 11px;
+}
+
+.fa-solid.fa-star {
+    color:#0065fc;
+}
+
+.fa-solid.fa-star.grey {
+    color: #d2d2d2;
 }
 
 /* *** H-VILLE *** */
@@ -240,6 +252,9 @@ h3 {
     justify-content: flex-start;
 }
 
+.location-card {
+    line-height: 0;
+}
 .location-card img {
     display: block;
     margin: auto;
@@ -261,9 +276,21 @@ h3 {
     flex-direction: column;
 }
 
+#hebergements-pop-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#hebergements-pop-title i {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .location-card-pop {
     box-sizing: border-box;
-    width: 350px;
+    width: 320px;
     height: 150px;
     border-radius: 25px;
     background-color: white;
@@ -275,16 +302,24 @@ h3 {
     justify-content: flex-start;
 }
 
-.location-card-pop img {
-    width: 40%;
-    border-radius: 25px 0px 0px 25px;
+.location-card-pop h3 {
+    line-height: 1.2;
+}
+
+.hebergement-pop-img {
+    background-size: cover;
+    display: block;
+    margin: auto;
+    width: 60%;
+    height: 95%;
+    border-radius: 25px 0 0 25px;
 }
 
 .location-card-pop.card-body {
+    width: 60%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-
 }
 
 
@@ -346,6 +381,15 @@ h3 {
     box-shadow: 3px 3px 10px #d2d2d2;
 }
 
+.activity-card-big h3 {
+    line-height: 2;
+    padding-left: 10px;
+}
+
+.activity-card h3 {
+    line-height: 1;
+    padding-left: 10px;
+}
 
 /* ********** FOOTER ********** */
 
