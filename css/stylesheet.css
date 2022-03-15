@@ -9,6 +9,7 @@
 body {
     font-family: Raleway, Verdana, Arial, serif;
     line-height: 0.7;
+    margin: 0;
 }
 
 h1 {
@@ -182,27 +183,16 @@ main {
 /* ********** ARTICLES ********** */
 h2 {
     font-size: 18px;
-    white-space: normal;
     line-height: 2.5;
 }
+
 h3 {
+    margin-top: 5px;
     font-size: 16px;
-    white-space: normal;
 }
 
-.card-body p {
+.card-body-loc p, .card-body-pop p {
     font-size: 13px;
-}
-
-.card-body {
-    padding-left: 10px;
-}
-
-.cards-display {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 
@@ -212,6 +202,13 @@ h3 {
     justify-content: space-between;
     flex-wrap: nowrap;
     margin-bottom: 50px;
+}
+
+.cards-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .stars {
@@ -245,21 +242,26 @@ h3 {
     border-radius: 25px;
     background-color: white;
     padding: 5px;
+    padding-bottom: 15px;
     box-shadow: 3px 3px 10px #d2d2d2;
     margin-bottom: 25px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
 }
 
-.location-card {
-    line-height: 0;
-}
-
-.location-card img {
+.card-body-loc {
+    height: 40px;
     display: block;
-    margin: auto;
+    flex-direction: column;
+    padding: 15px;
+    line-height: 0.5;
+}
+
+.location-card-img {
+    display: block;
+    margin: 0;
     width: 100%;
+    height: 150px;
     border-radius: 25px 25px 0px 0px;
     overflow: hidden;
 }
@@ -299,27 +301,31 @@ h3 {
     box-shadow: 3px 3px 10px #d2d2d2;
     margin-bottom: 25px;
     display: flex;
-    flex-direction: row;
 }
 
 .location-card-pop h3 {
     line-height: 1.2;
+    margin-bottom: 0;
+}
+
+.location-card-pop p {
+    margin-bottom: 50px;
+}
+
+.card-body-pop {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 20px;
 }
 
 .hebergement-pop-img {
     background-size: cover;
     display: block;
     margin: auto;
-    width: 60%;
-    height: 95%;
+    width: 130px;
+    height: 100%;
     border-radius: 25px 0 0 25px;
-}
-
-.location-card-pop.card-body {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
 }
 
 
@@ -328,6 +334,11 @@ h3 {
     width: 100%;
     display: flex;
     flex-direction: column;
+}
+
+#activites h3 {
+    margin: 15px;
+    font-size: 16px;
 }
 
 .cards-display-activites {
@@ -433,7 +444,7 @@ ul {
     /* *** MAIN *** */
     main {
         justify-content: space-between;
-        margin: auto;
+        margin: 30px;
     }
     /* ** BARRE RECHERCHE ** */
     #no-mobile-search-button {
@@ -475,13 +486,12 @@ ul {
 
     /* ** HEBERGEMENTS ** */
     #hebergements {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     /* VILLE */
     #hebergements-ville {
         width: 100%;
-        padding: 10px;
         margin-top: 10px;
     }
 
@@ -494,12 +504,12 @@ ul {
     /* POPULAIRES */
     #hebergements-populaires {
         width: 100%;
-        padding: 10px;
+        padding: 15px;
         margin-top: 15px;
     }
 
 
-    /* ** ACTIVITES ** */
+    /* ** ACTIVITES ** */    
     .cards-display-activites {
         flex-direction: column;
         flex-wrap: wrap;
@@ -513,8 +523,9 @@ ul {
 
     /* *** FOOTER *** */
     footer {
+        margin: 0;
         justify-content: space-between;
-        padding-left: 40px;
+        padding-left: 15px;
     }
 }
 
@@ -584,6 +595,9 @@ ul {
     }
 
     /* *** MAIN *** */
+    main {
+        margin: 15px;
+    }
     /* ** INTRO ** */
     #intro {
         width: 100%;
@@ -613,7 +627,14 @@ ul {
         flex-wrap: wrap;
     }
 
+    .filter-button {
+        margin-right: 5px;
+    }
+
     /* ** HEBERGEMENTS ** */
+    #hebergements {
+        margin-bottom: 0;
+    }
     /* VILLE */
     #hebergements-ville {
         background-color: transparent;
@@ -621,6 +642,10 @@ ul {
 
     .location-card {
         width: 330px;
+    }
+
+    .card-body-loc {
+        line-height: 0;
     }
 
     /* POPULAIRE */
@@ -650,6 +675,7 @@ ul {
     /* *** FOOTER *** */
 
     footer {
+        padding: 20px;
         flex-direction: column;
     }
 }
