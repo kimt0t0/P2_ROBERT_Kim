@@ -25,6 +25,7 @@ p, nav, button {
 header {
     display: flex;
     justify-content: space-between;
+    margin-top: 0;
 }
 
 /* ***** LOGO ***** */
@@ -64,6 +65,12 @@ a {
 }
 
 /* ********** MAIN ********** */
+
+main {
+    margin-left: 40px;
+    margin-right: 150px;
+    margin-bottom: 10px;
+}
 
 /* ********** INTRO ********** */
 /* ***** BARRE DE RECHERCHE ***** */
@@ -202,14 +209,15 @@ h3 {
 /* ***** HEBERGEMENTS ***** */
 #hebergements {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: nowrap;
+    margin-bottom: 50px;
 }
 
 /* *** H-VILLE *** */
 #hebergements-ville {
     box-sizing: border-box;
-    width: 60%;
+    width: 65%;
     height: auto;
     border-radius: 25px; 
     background-color: #f2f2f2;
@@ -233,6 +241,9 @@ h3 {
 }
 
 .location-card img {
+    display: block;
+    margin: auto;
+    width: 100%;
     border-radius: 25px 25px 0px 0px;
     overflow: hidden;
 }
@@ -242,7 +253,7 @@ h3 {
 /* *** H-POPULAIRES *** */
 #hebergements-populaires {
     box-sizing: border-box;
-    width: 30%;
+    width: 32%;
     background-color: #f2f2f2;
     border-radius: 25px;
     padding: 30px;
@@ -303,7 +314,9 @@ h3 {
 
 .activity-image {
     background-size: cover;
-    width: 90%x;
+    display: block;
+    margin: auto;
+    width: 100%;
     height: 80%;
     border-radius: 25px 25px 0 0;
 }
@@ -331,6 +344,21 @@ h3 {
     border: 1px #f2f2f2 solid;
     border-radius: 25px;
     box-shadow: 3px 3px 10px #d2d2d2;
+}
+
+
+/* ********** FOOTER ********** */
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f2f2f2;
+    line-height: 1.5;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
 }
 
 
