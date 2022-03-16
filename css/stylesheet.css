@@ -10,24 +10,23 @@ body {
     font-family: Raleway, Verdana, Arial, serif;
     line-height: 0.7;
     margin: 0;
+    padding: 0;
 }
 
 h1 {
     font-size: 24px;
     font-weight: bold;
-    line-height: 2;
+    line-height: 0.8;
 }
 
 p, nav, button {
     font-size: 16px;
-    white-space: nowrap;
 }
 
 /* ********** HEADER ********** */
 header {
     display: flex;
     justify-content: space-between;
-    margin-top: 0;
 }
 
 /* ***** LOGO ***** */
@@ -36,23 +35,21 @@ header {
     height: auto;
     padding-top: 20px;
     padding-left: 25px;
+    padding-bottom: 20px;
 }
 
 /* ***** MENU ***** */
-nav {
-    display: flex;
-    flex-direction: row;
-}
-
 nav ul {
     display: flex;
     list-style-type: none;
+    margin: 0;
+    padding-right: 150px;
 }
 
 nav ul li {
     padding-top: 50px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
     border-top: 2px transparent solid;
 }
 
@@ -76,14 +73,12 @@ main {
 
 /* ********** INTRO ********** */
 /* ***** BARRE DE RECHERCHE ***** */
-
 #search-bar, input[value] {
     display: inline-block;
     padding-top: 15px;
     padding-bottom: 15px;
     border: 2px #f2f2f2;
     font-size: 16px;
-    flex: none;
 }
 
 /* Partie grisée, utilisation des noms de classe et pas d'un id car sinon l'icone est bleue du fait des règles de priorité*/
@@ -125,9 +120,7 @@ main {
 }
 
 
-
 /* ***** FILTRES ***** */
-
 #filters {
     width: 100%;
     display: flex;
@@ -165,6 +158,7 @@ main {
 /* ***** RESULTAT RECHERCHE ***** */
 #search-result {
     margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .i-info {
@@ -183,7 +177,8 @@ main {
 /* ********** ARTICLES ********** */
 h2 {
     font-size: 18px;
-    line-height: 2.5;
+    line-height: 1.5;
+    padding: 0;
 }
 
 h3 {
@@ -204,6 +199,7 @@ h3 {
     margin-bottom: 50px;
 }
 
+/* *** GENERAL CARDS *** */
 .cards-display {
     display: flex;
     flex-direction: row;
@@ -227,10 +223,10 @@ h3 {
 #hebergements-ville {
     box-sizing: border-box;
     width: 65%;
-    height: auto;
+    height: 80%;
     border-radius: 25px; 
     background-color: #f2f2f2;
-    padding: 30px;
+    padding: 15px 30px 30px 30px;
     display: flex;
     flex-direction: column;
 }
@@ -272,9 +268,10 @@ h3 {
 #hebergements-populaires {
     box-sizing: border-box;
     width: 32%;
+    height: 80%;
     background-color: #f2f2f2;
     border-radius: 25px;
-    padding: 30px;
+    padding: 15px 30px 15px 30px;
     display: flex;
     flex-direction: column;
 }
@@ -293,7 +290,7 @@ h3 {
 
 .location-card-pop {
     box-sizing: border-box;
-    width: 320px;
+    width: 360px;
     height: 150px;
     border-radius: 25px;
     background-color: white;
@@ -323,7 +320,7 @@ h3 {
     background-size: cover;
     display: block;
     margin: auto;
-    width: 130px;
+    width: 150px;
     height: 100%;
     border-radius: 25px 0 0 25px;
 }
