@@ -245,6 +245,11 @@ h3 {
     flex-direction: column;
 }
 
+.location-card:hover {
+    width: 260px;
+    height: 208px;
+}
+
 .card-body-loc {
     height: 40px;
     display: block;
@@ -298,6 +303,12 @@ h3 {
     box-shadow: 3px 3px 10px #d2d2d2;
     margin-bottom: 30px;
     display: flex;
+}
+
+/* Problème visuel lié au placement des étoiles */
+.location-card-pop:hover {
+    width: 364px;
+    height: 150px;
 }
 
 .location-card-pop h3 {
@@ -355,6 +366,15 @@ h3 {
     justify-content: space-between;
 }
 
+.activity-card {
+    box-sizing: border-box;
+    width: 280px;
+    height: 230px;
+    border: 1px #f2f2f2 solid;
+    border-radius: 25px;
+    box-shadow: 3px 3px 10px #d2d2d2;
+}
+
 .activity-image {
     background-size: cover;
     display: block;
@@ -364,11 +384,14 @@ h3 {
     border-radius: 25px 25px 0 0;
 }
 
-.activity-image-big {
-    background-size: cover;
-    width: 90%x;
-    height: 87%;
-    border-radius: 25px 25px 0 0;
+.activity-card h3 {
+    line-height: 1;
+    padding-left: 10px;
+}
+
+.activity-card:hover {
+    width: 291px;
+    height: 239px;
 }
 
 .activity-card-big {
@@ -380,13 +403,11 @@ h3 {
     box-shadow: 3px 3px 10px #d2d2d2;
 }
 
-.activity-card {
-    box-sizing: border-box;
-    width: 280px;
-    height: 230px;
-    border: 1px #f2f2f2 solid;
-    border-radius: 25px;
-    box-shadow: 3px 3px 10px #d2d2d2;
+.activity-image-big {
+    background-size: cover;
+    width: 90%x;
+    height: 87%;
+    border-radius: 25px 25px 0 0;
 }
 
 .activity-card-big h3 {
@@ -394,9 +415,9 @@ h3 {
     padding-left: 10px;
 }
 
-.activity-card h3 {
-    line-height: 1;
-    padding-left: 10px;
+.activity-card-big:hover {
+    width: 291px;
+    height:520px;
 }
 
 /* ********** FOOTER ********** */
@@ -506,13 +527,27 @@ ul {
         justify-content: space-evenly;
     }
 
+    .location-card:hover {
+        width: 250px;
+        height: 200px;
+    }
+
     /* H-POPULAIRES */
     #hebergements-populaires {
         height: fit-content;
         width: 100%;
-        padding: 0px 30px 5px 20px;
+        padding: 0px 10px 5px 10px;
         margin-top: 15px;
         margin-bottom: 15px;
+    }
+
+    #hebergements-populaires h1 {
+        padding: 0px 20px 5px 15px;
+    }
+
+    .location-card-pop:hover {
+        width: 350px;
+        height: 145px;
     }
 
 
@@ -533,8 +568,18 @@ ul {
         margin-bottom: 20px;
     }
 
+    .activity-card:hover {
+        width: 280px;
+        height: 230px;
+    }
+
     .activity-card-big {
         margin-bottom: 20px;
+    }
+
+    .activity-card-big:hover {
+        width: 280px;
+        height: 500px;
     }
 
     /* *** FOOTER *** */
@@ -653,11 +698,16 @@ ul {
 
     /* H-VILLE */
     #hebergements-ville {
-        margin: 15px;
+        margin: 5px;
+        margin-bottom: 20px;
         background-color: transparent;
     }
 
     .location-card {
+        width: 330px;
+    }
+
+    .location-card:hover {
         width: 330px;
     }
 
@@ -670,10 +720,14 @@ ul {
         width: 100%;
         border-radius: 0;
         margin: 0;
-        padding-left: 25px;
+        padding-left: 10px;
     }
 
     .location-card-pop {
+        width: 320px;
+    }
+
+    .location-card-pop:hover {
         width: 320px;
     }
 
@@ -683,7 +737,7 @@ ul {
     }
     
     #activites h1 {
-        margin-left: 20px;
+        margin-left: 22px;
     }
 
     .cards-display-activites {
@@ -703,6 +757,11 @@ ul {
         margin-bottom: 25px;
         display: flex;
         flex-direction: column;
+    }
+
+    .activity-card-big:hover, .activity-card:hover {
+        width: 320px;
+        height: 200px;
     }
 
     /* *** FOOTER *** */
