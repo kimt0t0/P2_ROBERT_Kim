@@ -223,7 +223,7 @@ h3 {
 #hebergements-ville {
     box-sizing: border-box;
     width: 65%;
-    height: 80%;
+    height: 620px;
     border-radius: 25px; 
     background-color: #f2f2f2;
     padding: 15px 30px 30px 30px;
@@ -268,7 +268,7 @@ h3 {
 #hebergements-populaires {
     box-sizing: border-box;
     width: 32%;
-    height: 80%;
+    height: 620px;
     background-color: #f2f2f2;
     border-radius: 25px;
     padding: 15px 30px 15px 30px;
@@ -290,13 +290,13 @@ h3 {
 
 .location-card-pop {
     box-sizing: border-box;
-    width: 360px;
-    height: 150px;
+    width: 350px;
+    height: 145px;
     border-radius: 25px;
     background-color: white;
-    padding: 5px;
+    padding: 5px 10px 5px 5px;
     box-shadow: 3px 3px 10px #d2d2d2;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     display: flex;
 }
 
@@ -305,6 +305,7 @@ h3 {
     margin-bottom: 0;
 }
 
+/* Idéalement trouver un réglage flex pour remplacer ça: */
 .location-card-pop p {
     margin-bottom: 50px;
 }
@@ -320,9 +321,9 @@ h3 {
     background-size: cover;
     display: block;
     margin: auto;
-    width: 150px;
+    width: 135px;
     height: 100%;
-    border-radius: 25px 0 0 25px;
+    border-radius: 20px 0 0 20px;
 }
 
 
