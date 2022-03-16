@@ -481,14 +481,22 @@ ul {
         margin-bottom: 10px;
     }
 
+    /* ** RESULTAT RECHERCHE ** */
+    #search-result {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
     /* ** HEBERGEMENTS ** */
     #hebergements {
         flex-direction: column-reverse;
     }
 
-    /* VILLE */
+    /* H-VILLE */
     #hebergements-ville {
+        height: fit-content;
         width: 100%;
+        padding: 0px 30px 5px 20px;;
         margin-top: 10px;
     }
 
@@ -498,33 +506,46 @@ ul {
         justify-content: space-evenly;
     }
 
-    /* POPULAIRES */
+    /* H-POPULAIRES */
     #hebergements-populaires {
+        height: fit-content;
         width: 100%;
-        padding: 15px;
+        padding: 0px 30px 5px 20px;
         margin-top: 15px;
+        margin-bottom: 15px;
     }
 
 
-    /* ** ACTIVITES ** */    
+    /* ** ACTIVITES ** */   
+    #activites h1 {
+        margin-top: 0;
+    } 
+
     .cards-display-activites {
-        flex-direction: column;
-        flex-wrap: wrap;
         max-height: fit-content;
+        justify-content: space-evenly;
+    }
+    
+    .cards-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 20px;
     }
 
-    .activites-columns {
-        width: 100%;
-        flex-wrap: wrap;
+    .activity-card-big {
+        margin-bottom: 20px;
     }
 
     /* *** FOOTER *** */
     footer {
         margin: 0;
-        justify-content: space-between;
-        padding-left: 15px;
+        justify-content: space-evenly;
     }
 }
+
+
+
 
 
 /* ***** SMARTPHONE ***** */ 
@@ -542,7 +563,7 @@ ul {
    main {
     display: flex;
     flex-direction: column;
-    margin: 5px;
+    margin: 0;
 }
 
     h1, p {
@@ -592,13 +613,10 @@ ul {
     }
 
     /* *** MAIN *** */
-    main {
-        margin: 15px;
-    }
     /* ** INTRO ** */
     #intro {
         width: 100%;
-        margin: 0;
+        margin: 15px;
     }
     /* BARRE RECHERCHE */
     #no-mobile-search-button {
@@ -632,8 +650,10 @@ ul {
     #hebergements {
         margin-bottom: 0;
     }
-    /* VILLE */
+
+    /* H-VILLE */
     #hebergements-ville {
+        margin: 15px;
         background-color: transparent;
     }
 
@@ -645,17 +665,33 @@ ul {
         line-height: 0;
     }
 
-    /* POPULAIRE */
+    /* H-POPULAIRE */
     #hebergements-populaires {
+        width: 100%;
         border-radius: 0;
+        margin: 0;
+        padding-left: 25px;
+    }
+
+    .location-card-pop {
+        width: 320px;
     }
 
     /* ** ACTIVITES ** */
+    #activites {
+        margin-bottom: 25px;
+    }
+    
+    #activites h1 {
+        margin-left: 20px;
+    }
+
     .cards-display-activites {
         max-height: fit-content;
     }
-    .activites-columns {
-        max-height: fit-content;
+    
+    .cards-column {
+        margin-bottom: 0;
     }
 
     .activity-card-big, .activity-card {
@@ -672,6 +708,7 @@ ul {
     /* *** FOOTER *** */
 
     footer {
+        margin-top: 0px;
         padding: 20px;
         flex-direction: column;
     }
