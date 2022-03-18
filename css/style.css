@@ -11,6 +11,9 @@ body {
     line-height: 0.7;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 h2 {
@@ -21,6 +24,7 @@ h2 {
 
 p, nav, button {
     font-size: 16px;
+    line-height: 1;
 }
 
 /* ********** HEADER ********** */
@@ -72,6 +76,9 @@ main {
     margin-left: 40px;
     margin-right: 150px;
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* ********** INTRO ********** */
@@ -160,7 +167,7 @@ main {
 
 .filter-button:hover {
     background-color:#0065fc;
-    color:#01255c;
+    color:white;
 }
 
 /* ***** RESULTAT RECHERCHE ***** */
@@ -190,11 +197,15 @@ h3 {
 }
 
 h4 {
-    margin-top: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
     font-size: 16px;
+    line-height: 1.5;
+    white-space: normal;;
 }
 
 .card-body-loc p, .card-body-pop p {
+    margin-top: 0;
     font-size: 13px;
 }
 
@@ -203,7 +214,6 @@ h4 {
 #hebergements {
     display: flex;
     justify-content: space-between;
-    flex-wrap: nowrap;
     margin-bottom: 50px;
 }
 
@@ -231,6 +241,7 @@ h4 {
 #hebergements-ville {
     box-sizing: border-box;
     width: 65%;
+    min-width: 830px;
     height: 620px;
     border-radius: 25px; 
     background-color: #f2f2f2;
@@ -253,9 +264,8 @@ h4 {
     flex-direction: column;
 }
 
-.location-card:hover {
-    width: 260px;
-    height: 208px;
+.location-card:hover, .location-card-pop:hover, .activity-card:hover, .activity-card-big:hover {
+    transform: scale(1.1);
 }
 
 .card-body-loc {
@@ -281,12 +291,14 @@ h4 {
 #hebergements-populaires {
     box-sizing: border-box;
     width: 32%;
+    min-width: 360px;
     height: 620px;
     background-color: #f2f2f2;
     border-radius: 25px;
     padding: 15px 30px 15px 30px;
     display: flex;
     flex-direction: column;
+    white-space: nowrap;
 }
 
 #hebergements-pop-title {
@@ -307,33 +319,18 @@ h4 {
     height: 145px;
     border-radius: 25px;
     background-color: white;
-    padding: 5px 30px 5px 5px;
     box-shadow: 3px 3px 10px #d2d2d2;
+    padding: 5px;
     margin-bottom: 30px;
     display: flex;
-}
-
-/* Problème visuel lié au placement des étoiles */
-.location-card-pop:hover {
-    width: 364px;
-    height: 150px;
-}
-
-.location-card-pop h4 {
-    line-height: 1.2;
-    margin-bottom: 0;
-}
-
-/* Idéalement trouver un réglage flex pour remplacer ça: */
-.location-card-pop p {
-    margin-bottom: 50px;
+    justify-content: space-between;
 }
 
 .card-body-pop {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    padding-left: 20px;
+    justify-content: space-between;
+    padding: 20px;
 }
 
 .hebergement-pop-img {
@@ -351,7 +348,7 @@ h4 {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     margin-bottom: 50px;
 }
 
@@ -381,6 +378,7 @@ h4 {
     border: 1px #f2f2f2 solid;
     border-radius: 25px;
     box-shadow: 3px 3px 10px #d2d2d2;
+    margin-bottom: 20px;
 }
 
 .activity-image {
@@ -397,11 +395,6 @@ h4 {
     padding-left: 10px;
 }
 
-.activity-card:hover {
-    width: 291px;
-    height: 239px;
-}
-
 .activity-card-big {
     box-sizing: border-box;
     width: 280px;
@@ -409,6 +402,7 @@ h4 {
     border: 1px #f2f2f2 solid;
     border-radius: 25px;
     box-shadow: 3px 3px 10px #d2d2d2;
+    margin-bottom: 20px;
 }
 
 .activity-image-big {
@@ -421,11 +415,6 @@ h4 {
 .activity-card-big h4 {
     line-height: 2;
     padding-left: 10px;
-}
-
-.activity-card-big:hover {
-    width: 291px;
-    height:520px;
 }
 
 /* ********** FOOTER ********** */
@@ -501,7 +490,7 @@ ul {
      #display-filter-buttons {
          width: 100%;
          display: flex;
-         margin: auto;
+         margin: 15px;
      }    
 
      .filter-button {
@@ -525,6 +514,7 @@ ul {
     #hebergements-ville {
         height: fit-content;
         width: 100%;
+        min-width: 0;
         padding: 0px 30px 5px 20px;;
         margin-top: 10px;
     }
@@ -536,8 +526,7 @@ ul {
     }
 
     .location-card:hover {
-        width: 250px;
-        height: 200px;
+        transform: scale(1);
     }
 
     /* H-POPULAIRES */
@@ -554,8 +543,7 @@ ul {
     }
 
     .location-card-pop:hover {
-        width: 350px;
-        height: 145px;
+        transform: scale(1);
     }
 
 
@@ -577,8 +565,7 @@ ul {
     }
 
     .activity-card:hover {
-        width: 280px;
-        height: 230px;
+        transform: scale(1);
     }
 
     .activity-card-big {
@@ -586,8 +573,7 @@ ul {
     }
 
     .activity-card-big:hover {
-        width: 280px;
-        height: 500px;
+        transform: scale(1);
     }
 
     /* *** FOOTER *** */
@@ -613,12 +599,6 @@ ul {
        margin: auto;
    }
 
-   main {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-}
-
     h2, p {
     white-space: normal;
     line-height: 1.2;
@@ -641,10 +621,6 @@ ul {
     }
 
     /* ** MENU ** */
-    #logo {
-        padding: auto;
-    }
-
     nav ul {
         width: 100%;
         justify-content: stretch;
@@ -702,6 +678,7 @@ ul {
     /* ** HEBERGEMENTS ** */
     #hebergements {
         margin-bottom: 0;
+        min-width: 0px;
     }
 
     /* H-VILLE */
@@ -716,7 +693,7 @@ ul {
     }
 
     .location-card:hover {
-        width: 330px;
+        transform: scale(1);
     }
 
     .card-body-loc {
@@ -736,7 +713,7 @@ ul {
     }
 
     .location-card-pop:hover {
-        width: 320px;
+        transform: scale(1);
     }
 
     /* ** ACTIVITES ** */
@@ -768,8 +745,7 @@ ul {
     }
 
     .activity-card-big:hover, .activity-card:hover {
-        width: 320px;
-        height: 200px;
+        transform: scale(1);
     }
 
     /* *** FOOTER *** */
