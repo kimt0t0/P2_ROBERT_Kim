@@ -557,6 +557,10 @@ ul {
         transform: scale(1);
     }
 
+    .card-body-loc {
+        text-align: left;
+    }
+
     /* H-POPULAIRES */
     #hebergements-populaires {
         height: fit-content;
