@@ -519,8 +519,7 @@ ul {
         height: fit-content;
         width: 100%;
         min-width: 0;
-        margin: 0;
-        margin-top: 10px;
+        background-color: transparent;
     }
 
     .cards-display {
@@ -676,7 +675,7 @@ ul {
     }
 
     .filter-button {
-        margin-right: 5px;
+        margin-right: auto;
     }
 
     /* ** HEBERGEMENTS ** */
@@ -690,6 +689,7 @@ ul {
         margin: 5px;
         margin-bottom: 20px;
         background-color: transparent;
+        text-align: center;
     }
 
     .location-card {
@@ -758,5 +758,6 @@ ul {
         margin-top: 0px;
         padding: 20px;
         flex-direction: column;
+        text-align:center; /* sinon fait des choses moches sur les ipad petites dimensions */
     }
 }
