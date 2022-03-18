@@ -336,8 +336,15 @@ h4 {
 .card-body-pop {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: flex-start;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+}
+
+.card-body-pop .stars {
+    position: absolute;
+    bottom: 5px;
 }
 
 .hebergement-pop-img {
