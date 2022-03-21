@@ -126,7 +126,7 @@ main {
     border: none;
     text-align: center;
     color: white;
-    font-weight: bold; /* ne correspond pas tout à fait */
+    font-weight: bold;
     position: sticky;
     cursor: pointer;
 }
