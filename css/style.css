@@ -574,6 +574,10 @@ ul {
         padding: 0px 20px 5px 15px;
     }
 
+    div#hebergements-pop-title {
+        justify-content: space-evenly;
+    }
+
     .location-card-pop:hover {
         transform: scale(1);
     }
@@ -717,7 +721,7 @@ ul {
     }
 
     .filter-button {
-        margin-right: auto;
+        margin-right: 5px;
     }
 
     /* ** HEBERGEMENTS ** */
