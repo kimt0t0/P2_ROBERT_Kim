@@ -571,13 +571,14 @@ ul {
         margin-top: 15px;
         margin-bottom: 15px;
     }
+    
+    div#hebergements-pop-title {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
 
     #hebergements-populaires h1 {
         padding: 0px 20px 5px 15px;
-    }
-
-    div#hebergements-pop-title {
-        justify-content: space-evenly;
     }
 
     .location-card-pop:hover {
@@ -588,6 +589,7 @@ ul {
     /* ** ACTIVITES ** */   
     #activites h2 {
         margin-top: 0;
+        margin-left: 40px;
     } 
 
     .cards-display-activites {
@@ -760,6 +762,11 @@ ul {
         padding-left: 10px;
     }
 
+    div#hebergements-pop-title {
+        justify-content: space-evenly;
+        margin: 0;
+    }
+
     .location-card-pop {
         width: 320px;
     }
@@ -775,7 +782,9 @@ ul {
     }
     
     #activites h2 {
-        margin-left: 22px;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 15px;
     }
 
     .cards-display-activites {
