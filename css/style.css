@@ -247,6 +247,12 @@ h4 {
     color: #d2d2d2;
 }
 
+
+.location-card:hover, .location-card-pop:hover, .activity-card:hover, .activity-card.big:hover {
+    transform: scale(1.1);
+}
+
+
 /* *** H-VILLE *** */
 #hebergements-ville {
     box-sizing: border-box;
@@ -272,10 +278,6 @@ h4 {
     margin-bottom: 25px;
     display: flex;
     flex-direction: column;
-}
-
-.location-card:hover, .location-card-pop:hover, .activity-card:hover, .activity-card.big:hover {
-    transform: scale(1.1);
 }
 
 .card-body-loc {
@@ -536,6 +538,13 @@ ul {
         margin-bottom: 20px;
     }
 
+    /* ** RETRAIT HOVER CARDS ** */
+    
+.location-card:hover, .location-card-pop:hover, .activity-card:hover, .activity-card.big:hover {
+    transform: none;
+}
+
+
     /* ** HEBERGEMENTS ** */
     #hebergements {
         flex-direction: column-reverse;
@@ -553,10 +562,6 @@ ul {
         width: 100%;
         flex-direction: row;
         justify-content: space-evenly;
-    }
-
-    .location-card:hover {
-        transform: scale(1);
     }
 
     .card-body-loc {
@@ -581,10 +586,6 @@ ul {
         padding: 0px 20px 5px 15px;
     }
 
-    .location-card-pop:hover {
-        transform: scale(1);
-    }
-
 
     /* ** ACTIVITES ** */   
     #activites h2 {
@@ -606,10 +607,6 @@ ul {
     
     .activity-card h4 {
         text-align: left;
-    }
-
-    .activity-card:hover {
-        transform: scale(1);
     }
 
     .activity-card {
@@ -746,10 +743,6 @@ ul {
         width: 330px;
     }
 
-    .location-card:hover {
-        transform: scale(1);
-    }
-
     .card-body-loc {
         line-height: 0;
     }
@@ -769,10 +762,6 @@ ul {
 
     .location-card-pop {
         width: 320px;
-    }
-
-    .location-card-pop:hover {
-        transform: scale(1);
     }
 
     /* ** ACTIVITES ** */
@@ -809,10 +798,6 @@ ul {
         margin-bottom: 40px;
         display: flex;
         flex-direction: column;
-    }
-
-    .activity-card.big:hover, .activity-card:hover {
-        transform: scale(1);
     }
 
     .activity-image, .activity-image.big {
