@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    width: 100%;
+    width: 80%;
     font-family: Raleway, Verdana, Arial, serif;
     line-height: 0.7;
     margin: 0;
@@ -478,6 +478,10 @@ ul {
 /* ***** TABLETTE ***** */
 @media screen and (max-width: 992px)
 {
+    /* ***GÉNÉRAL *** */
+    body {
+        width: 100%;
+    }
     /* *** HEADER *** */
     /* ** LOGO & ANCRES ** */
     nav ul li{
